@@ -9,7 +9,7 @@ function InputForm({ setResponse }) {
     try {
       setError(null);
       const parsedInput = JSON.parse(jsonInput); // Validate JSON
-      const res = await axios.post('http://localhost:5000/bfhl', parsedInput); // Adjust URL if backend is hosted
+      const res = await axios.post('https://bfhl-app-wqya.onrender.com/bfhl', parsedInput); // Adjust URL if backend is hosted
       setResponse(res.data); // Pass response to parent
     } catch (err) {
       setError('Invalid JSON input or API error');
